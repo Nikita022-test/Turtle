@@ -4,7 +4,6 @@ import android.view.*;
 import android.content.*;
 import android.util.*;
 import android.graphics.*;
-import com.didgt.turtle.*;
 
 public abstract class Turtle extends View
 {
