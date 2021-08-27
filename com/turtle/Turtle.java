@@ -33,10 +33,11 @@ public abstract class Turtle extends View
 		}
 	}
 
+       //Добовление словаря
 	public void setDis(DictionaryT d){
 		dic=d;
 	}
-
+        //Запуск черепахи
 	public void start(String key,int n ){
 		for(int i=0;i<n;i++){
 			String fkey="";
@@ -49,15 +50,18 @@ public abstract class Turtle extends View
 		l=key;
 		onDraw(new Canvas());
 	}
-
+        
+        //повернуть черепаху налево
 	protected void leftTurn(float c){
 		this.c-=c;
 	}
 
+        //повернуть черепаху направо
 	protected void rightTurn(float c){
 		this.c+=c;
 	}
-
+         
+        //черепаха шагает в перёд остовляя след
 	protected void step(Canvas canvas){
 		float xS=x;
 		float yS=y;
@@ -65,6 +69,8 @@ public abstract class Turtle extends View
 		canvas.drawLine(xS,yS,x,y,p);
 	}
 
+
+        //черепаха шагает в перёд не оставля след
 	protected void bounce(){
 		x+=Math.cos(Math.toRadians(c))*50;
 		y+=Math.sin(Math.toRadians(c))*50;
